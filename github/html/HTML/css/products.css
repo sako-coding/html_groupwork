@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #333;
+  font-size: 0.75rem;
+  font-family: 'Raleway', sans-serif;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.site-title {
+  width: 109px;
+  line-height: 1px;
+  margin: 0 auto 36px auto;
+}
+.site-title a {
+  display: block;
+}
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  max-width: 1000px;
+  padding: 46px 0 26px 0;
+  margin: 0 auto 50px auto;
+  border-bottom: solid 1px #c3c3c3;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .menu,
+nav .login {
+  display: flex;
+  align-items: center;
+}
+nav .menu li {
+  margin-right: 14px;
+}
+nav .login li {
+  margin-left: 14px;
+}
+
+/*-------------------------------------------
+商品ページ
+-------------------------------------------*/
+#item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+/*
+flex-shrink: 0;
+画像が縮小されるのを防ぐ
+*/
+#item .item-image {
+  max-width: 400px;
+  flex-shrink: 0;
+  margin-right: 60px;
+}
+#item .item-info p {
+  margin-bottom: 30px;
+  line-height: 1.9;
+}
+/*
+「display: flex;」と「align-items: center;」で、
+高さを中央にそろえる
+*/
+#item .item-info .item-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-top: solid 1px #c3c3c3;
+  border-bottom: solid 1px #c3c3c3;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#item .item-info .order-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#item .item-info .order-table .color,
+#item .item-info .order-table .size {
+  width: 20%;
+}
+#item .item-info .order-table .quantity {
+  width: 60%;
+}
+/*
+テーブルの線は重ならないように設定（外枠なしのレイアウト）
+１．tdの上を設定
+*/
+#item .item-info .order-table td {
+  border-top: solid 1px #c3c3c3;
+}
+/*
+２．th、tdの右を設定
+*/
+#item .item-info .order-table th,
+#item .item-info .order-table td {
+  font-weight: normal;
+  padding: 10px;
+  border-right: solid 1px #c3c3c3;
+  text-align: center;
+}
+/*
+３．th、tdの最後だけ右の線を消す
+*/
+#item .item-info .order-table th:last-child,
+#item .item-info .order-table td:last-child {
+  border-right: none;
+}
+/*
+-moz-appearance: menulist;
+-webkit-appearance: menulist;
+セレクトボックスに右端の矢印を表示
+*/
+#item .item-info .order-table select {
+  width: 100%;
+  border: solid 1px #c3c3c3;
+  padding: 0 10px;
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+}
+#item .item-info .cart-btn {
+  width: 100%;
+  background-color: #4B4B4B;
+  color: #fff;
+  display: block;
+  line-height: 1;
+  padding: 18px 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/*
+テーブルの線は重ならないように設定（外枠ありのレイアウト）
+１．テーブルの上と左に設定
+*/
+#item .item-info .size-table {
+  width: 100%;
+  border-top: solid 1px #c3c3c3;
+  border-left: solid 1px #c3c3c3;
+}
+#item .item-info .size-table .size {
+  width: 16%;
+}
+#item .item-info .size-table .chest,
+#item .item-info .size-table .weist,
+#item .item-info .size-table .height {
+  width: 28%;
+}
+#item .item-info .size-table th {
+  background-color: #ecebeb;
+}
+/*
+２．th、tdの右と下に設定
+*/
+#item .item-info .size-table th,
+#item .item-info .size-table td {
+  font-weight: normal;
+  padding: 10px;
+  border-right: solid 1px #c3c3c3;
+  border-bottom: solid 1px #c3c3c3;
+  text-align: center;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+#footer {
+  padding: 10px 0;
+}
+#footer .copyright {
+  font-size: 0.625rem;
+  text-align: center;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 896px) {
+
+  .site-title {
+    margin-bottom: 26px;
+  }
+
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  #header {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding: 36px 16px 16px 16px;
+  }
+  /*
+  横スクロールできるようにする
+  */
+  nav {
+    overflow-x: scroll;
+  }
+
+  /*-------------------------------------------
+  商品ページ
+  -------------------------------------------*/
+  #item {
+    flex-direction: column;
+  }
+  #item .item-image {
+    max-width: 100%;
+    margin: 0 0 10px 0;
+  }
+  #item .item-info {
+    padding: 0 16px;
+  }
+}
