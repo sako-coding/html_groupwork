@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+/*ログインフォームのエリア内のスタイル*/
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    /* background: #ffffff; */
+    text-align: center;
+}
+
+.box{
+    color: black upperacase;
+    font-weight: 500;
+}
+
+/*ユーザーIDとパスワード入力ボックスのスタイル*/
+.box input[type="text"],.box input[type="password"],box.input[type="email"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+/*入力ボックスがフォーカスされた時のスタイル（幅が大きくなる＆枠の色が変わる）*/
+.box input[type="text"]:focus, .box input[type="password"]:focus, .box input[type="mail"]:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+/*Loginボタン, Registerボタンのスタイル*/
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    columns:white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+/*Registerボタンをマウスオーバーしたときのスタイル*/
+.box input[type="submit"]:hover{
+    background: #2ecc71;
+}
+.form-text { 
+    margin: 90px auto;
+    padding: 210px;
+    width: 5%;
+    color: #666666;
+    border: 3px solid #000;
+    background-color: #fff;
+    border-radius: 20px 
+}
