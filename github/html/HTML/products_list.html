@@ -17,7 +17,7 @@
       <link rel="stylesheet" href="css/responsive.css">
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      
+      <link rel="stylesheet" href="css/pageup.css">
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       
@@ -55,7 +55,7 @@
                                  <a class="nav-link" href="index.html">ホーム</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="about.html">Multi Shop紹介</a>
+                                 <a class="nav-link" href="about.html">マルチショップ紹介</a>
                               </li>
                               <li class="nav-item active">
                                  <a class="nav-link" href="products_list.html">製品</a>
@@ -64,14 +64,14 @@
                                  <a class="nav-link" href="contacts.html">お問い合わせ</a>
                               </li>
                               <li class="nav-item d_none login_btn">
-                                 <a class="nav-link" href="login.html">Login</a>
+                                 <a class="nav-link" href="login.html">ログイン</a>
                               </li>
                               <li class="nav-item d_none">
-                                 <a class="nav-link" href="register.html">Register</a>
+                                 <a class="nav-link" href="register.html">登録</a>
                               </li>
-                              <li class="nav-item d_none sea_icon">
+                              <!-- <li class="nav-item d_none sea_icon">
                                  <a class="nav-link" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><i class="fa fa-search" aria-hidden="true"></i></a>
-                              </li>
+                              </li> -->
                            </ul>
                         </div>
                      </nav>
@@ -252,16 +252,18 @@
             </div>
          </div>
       </div>
-	  
+      <div class="moveUpBtn">
+        PAGE UP
+      </div>
     <footer>
       <div class="footer">
          <div class="container">
             <div class="row">
                <div class="col-md-8 offset-md-2">
                   <ul class="location_icon">
-                     <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Location</li>
-                     <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> 010-6383-4463</li>
-                     <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> cableguy123@naver.com</li>
+                     <li><a href="contacts.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Location</li>
+                     <li><a href="contacts.html"><i class="fa fa-phone" aria-hidden="true"></i></a><br> 010-6383-4463</li>
+                     <li><a href="contacts.html"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> cableguy123@naver.com</li>
                   </ul>
                </div>
             </div>
@@ -283,6 +285,14 @@
    <!-- sidebar 実現 -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
-
+   <script>
+    const upButton = document.querySelector(".moveUpBtn");
+    upButton.onclick = () => {
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+      });
+    }
+   </script>
 </body>
 </html>
